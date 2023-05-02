@@ -3,6 +3,7 @@
 This python script contains Blueprint  insrtances and other things.
 """
 from flask import Flask
+from flask import make_response
 from flask import jsonify
 from models import storage
 from api.v1.views import app_views
@@ -21,7 +22,7 @@ def teardown(exception):
 def not_found(error):
     """This handles all 404 error. """
 
-    return jsonify({"error": "Not found"})
+    return make_response(jsonify({"error": "Not found"}))
 
 
 if __name__ == '__main__':
