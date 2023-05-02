@@ -7,7 +7,6 @@ from flask import jsonify, make_response, abort
 from models import storage
 from models.state import State
 from flask import request
-from flask import abort
 
 
 @app_views.route('/states', methods=['GET'], strict_slashes=False)
