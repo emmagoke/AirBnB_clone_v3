@@ -18,7 +18,7 @@ def get_cities_in_states(state_id):
     if state is None:
         abort(404)
 
-    city_state = [ city.to_dict() for city in state.cities]
+    city_state = [city.to_dict() for city in state.cities]
     return make_response(jsonify(city_state), 200)
 
 
@@ -26,7 +26,7 @@ def get_cities_in_states(state_id):
 def get_city(city_id):
     """ Retrieves a City object. """
 
-    city  = storage.get(City, city_id)
+    city = storage.get(City, city_id)
     if city is None:
         abort(404)
 
