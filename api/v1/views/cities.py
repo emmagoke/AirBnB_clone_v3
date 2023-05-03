@@ -81,4 +81,5 @@ def update_city(city_id):
     for item, value in data.items():
         if value not in to_ignore:
             setattr(city, item, value)
+    city.save()
     return make_response(jsonify(city.to_dict()), 200)
