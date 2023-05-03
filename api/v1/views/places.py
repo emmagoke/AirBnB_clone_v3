@@ -84,7 +84,7 @@ def update_place(place_id):
     if not request.get_json():
         abort(400, description="Not a JSON")
 
-    to_ignore = ['id', 'user_id', 'place_id', 'created_at', 'updated_at']
+    to_ignore = ['id', 'user_id', 'city_id', 'created_at', 'updated_at']
     data = request.get_json()
     for item, value in data.items():
         if value not in to_ignore:
